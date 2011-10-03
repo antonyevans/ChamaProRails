@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Table:</b>
+  <%= @table.table %>
+</p>
+
+<p>
+  <b>Table url:</b>
+  <%= @table.table_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_table_path(@table) %> |
+<%= link_to 'Back', tables_path %>

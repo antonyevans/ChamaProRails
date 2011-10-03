@@ -1,4 +1,6 @@
 ChamaPro::Application.routes.draw do
+  resources :tables
+
   devise_for :admins
 
   # The priority is based upon order of creation:
