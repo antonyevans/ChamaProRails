@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  client_ID: MyString
+  balance: 1.5
+
+two:
+  client_ID: MyString
+  balance: 1.5

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @managers_cash.user_id %>
+</p>
+
+<p>
+  <b>Balance:</b>
+  <%= @managers_cash.balance %>
+</p>
+
+
+<%= link_to 'Edit', edit_managers_cash_path(@managers_cash) %> |
+<%= link_to 'Back', managers_cashes_path %>

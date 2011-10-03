@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  transaction_ID: MyString
+  client_ID: MyString
+  type: MyString
+  created: 2011-10-03 17:04:33
+  amount: 1.5
+
+two:
+  transaction_ID: MyString
+  client_ID: MyString
+  type: MyString
+  created: 2011-10-03 17:04:33
+  amount: 1.5

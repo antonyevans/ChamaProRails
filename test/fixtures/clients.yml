@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  client_ID: MyString
+  group_ID: MyString
+  firstName: MyString
+  surname: MyString
+  mobileNumber: MyString
+  email: MyString
+  gender: MyString
+  birthyear: MyString
+  photo: MyString
+  created: 2011-10-03 17:11:14
+  type: MyString
+
+two:
+  client_ID: MyString
+  group_ID: MyString
+  firstName: MyString
+  surname: MyString
+  mobileNumber: MyString
+  email: MyString
+  gender: MyString
+  birthyear: MyString
+  photo: MyString
+  created: 2011-10-03 17:11:14
+  type: MyString

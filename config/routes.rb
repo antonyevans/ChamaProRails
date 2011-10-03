@@ -1,4 +1,16 @@
 ChamaPro::Application.routes.draw do
+  resources :clients
+
+  resources :balances
+
+  resources :groups
+
+  resources :managers_cashes
+
+  resources :transactions
+
+  resources :users
+
   resources :tables
 
   devise_for :admins

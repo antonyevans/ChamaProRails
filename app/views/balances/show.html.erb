@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Client id:</b>
+  <%= @balance.client_ID %>
+</p>
+
+<p>
+  <b>Balance:</b>
+  <%= @balance.balance %>
+</p>
+
+
+<%= link_to 'Edit', edit_balance_path(@balance) %> |
+<%= link_to 'Back', balances_path %>

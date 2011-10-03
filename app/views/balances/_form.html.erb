@@ -1,0 +1,25 @@
+<%= form_for(@balance) do |f| %>
+  <% if @balance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@balance.errors.count, "error") %> prohibited this balance from being saved:</h2>
+
+      <ul>
+      <% @balance.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :client_ID %><br />
+    <%= f.text_field :client_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :balance %><br />
+    <%= f.text_field :balance %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
