@@ -3,7 +3,6 @@
 <table>
   <tr>
     <th>Table</th>
-    <th>Table url</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,8 +10,7 @@
 
 <% @tables.each do |table| %>
   <tr>
-    <td><%= table.table %></td>
-    <td><%= table.table_url %></td>
+    <td><%= link_to table.table, :controller => table.table_url %></td>
     <td><%= link_to 'Show', table %></td>
     <td><%= link_to 'Edit', edit_table_path(table) %></td>
     <td><%= link_to 'Destroy', table, :confirm => 'Are you sure?', :method => :delete %></td>
