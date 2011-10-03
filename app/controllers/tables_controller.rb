@@ -1,4 +1,5 @@
 class TablesController < ApplicationController
+  before_filter :authenticate_admin!
   # GET /tables
   # GET /tables.xml
   def index
