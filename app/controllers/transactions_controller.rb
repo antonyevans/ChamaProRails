@@ -1,4 +1,5 @@
 class TransactionsController < ApplicationController
+  before_filter :authenticate_admin!
   # GET /transactions
   # GET /transactions.xml
   def index

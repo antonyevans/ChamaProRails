@@ -1,4 +1,5 @@
 class BalancesController < ApplicationController
+  before_filter :authenticate_admin!
   # GET /balances
   # GET /balances.xml
   def index

@@ -1,4 +1,5 @@
 class ManagersCashesController < ApplicationController
+  before_filter :authenticate_admin!
   # GET /managers_cashes
   # GET /managers_cashes.xml
   def index
