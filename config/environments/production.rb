@@ -13,7 +13,7 @@ ChamaPro::Application.configure do
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
   
   #mailer to handle changing passwords
-  config.action_mailer.default_url_options = { :host => 'http://furious-robot-8865.heroku.com/' }
+  config.action_mailer.default_url_options = { :host => 'furious-robot-8865.heroku.com' }
 
   # For nginx:
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
