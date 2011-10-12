@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_admin!
-  # GET /users
+  before_filter :authenticate_admin!, :except => [:create, :update] 
+  # GET /users 
   # GET /users.xml
   def index
     @users = User.all
@@ -44,12 +44,17 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
 
     respond_to do |format|
-      if @user.save
-        format.html { redirect_to(@user, :notice => 'User was successfully created.') }
-        format.xml  { render :xml => @user, :status => :created, :location => @user }
+      if manager_signed_in?
+        if @user.save
+          format.html { redirect_to(@user, :notice => 'User was successfully created.') }
+          format.xml  { render :xml => @user, :status => :created, :location => @user }
+        else
+          format.html { render :action => "new" }
+          format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+        end
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+        format.html { render :action => "new", :notice => 'Invalid user' }
+        format.xml  { render :xml => @user.errors, :status => :unauthorized }
       end
     end
   end
