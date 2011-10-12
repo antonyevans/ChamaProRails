@@ -5,6 +5,7 @@ class TablesController < ApplicationController
   def index
     @tables = Table.all
     @managers = Manager.all
+    @admins = Admin.all
 
     respond_to do |format|
       format.html # index.html.erb
