@@ -22,5 +22,19 @@
 
 <%= link_to 'New Table', new_table_path %>
 
+<br>
+Current managers in the system are:
+<table>
+  <tr>
+    <th>Email</th>
+  </tr>
+
+<% @managers.each do |manager| %>
+  <tr>
+    <td><%= manager.email %></td>
+  </tr>
+<% end %>
+</table>
+
 
 
