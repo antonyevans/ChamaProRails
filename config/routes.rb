@@ -1,4 +1,6 @@
 ChamaPro::Application.routes.draw do
+  devise_for :managers
+
   resources :clients
 
   resources :balances
