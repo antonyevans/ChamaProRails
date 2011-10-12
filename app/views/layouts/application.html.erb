@@ -10,10 +10,18 @@
 
 <div id="user_nav">
   <% if admin_signed_in? %>
-    Signed in as <%= current_admin.email %>. Not you?
+    Signed in as admin <%= current_admin.email %>. Not you?
     <%= link_to "Sign out", destroy_admin_session_path, :method => :delete %>
   <% else %>
     <%= link_to "Sign up", new_admin_registration_path %> or <%= link_to "sign in", new_admin_session_path %>
+  <% end %>
+</div>
+<div id="manager details">
+  <% if manager_signed_in? %>
+    Signed in as manager <%= current_manager.email %>. Not you?
+    <%= link_to "Sign out", destroy_manager_session_path, :method => :delete %>
+  <% else %>
+    No Manager currently signed in <%= link_to "Sign up", new_manager_registration_path %> or <%= link_to "sign in", new_manager_session_path %>
   <% end %>
 </div>
 

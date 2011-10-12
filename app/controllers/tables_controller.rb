@@ -4,6 +4,7 @@ class TablesController < ApplicationController
   # GET /tables.xml
   def index
     @tables = Table.all
+    @managers = Manager.all
 
     respond_to do |format|
       format.html # index.html.erb
