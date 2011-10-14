@@ -1,6 +1,8 @@
 ChamaPro::Application.routes.draw do
   devise_for :managers, :controllers => {:sessions => 'sessions'}
   
+  resources :managers
+  
   resources :clients
 
   resources :balances
